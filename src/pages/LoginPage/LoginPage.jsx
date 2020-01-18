@@ -4,8 +4,12 @@ import './LoginPage.css';
 
 class LoginPage extends Component {
     render() {
-        return {
-            
-        }
+        return (
+            <div>
+                <Link to="/">Cancel Login</Link>
+            </div>
+        )
     }
 }
+
+export default LoginPage;
