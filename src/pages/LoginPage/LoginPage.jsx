@@ -4,6 +4,8 @@ import './LoginPage.css';
 
 class LoginPage extends Component {
     render() {
-        return 
+        return {
+            
+        }
     }
 }
