@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {Route, Switch} from 'react-router-dom'
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar/NavBar'
-import SignupPage from './src/pages/SignupPage'
-import LoginPage from './src/pages/LoginPage'
+import SignupPage from './pages/SignupPage/SignupPage'
+import LoginPage from './pages/LoginPage/LoginPage'
 
 class App extends Component {
   render() {
