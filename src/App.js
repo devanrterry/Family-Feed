@@ -5,8 +5,15 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar'
 import SignupPage from './pages/SignupPage/SignupPage'
 import LoginPage from './pages/LoginPage/LoginPage'
+import userService from '../utils/userService'
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      user: userService.getUser();
+    }
+  }
   render() {
   return (
     <div className="App">
