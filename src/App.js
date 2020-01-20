@@ -7,6 +7,12 @@ import SignupPage from './pages/SignupPage/SignupPage'
 import LoginPage from './pages/LoginPage/LoginPage'
 import userService from './utils/userService'
 
+
+var handleLogout = () => {
+  userService.logout();
+  this.setState({user: null});
+}
+
 class App extends Component {
   constructor() {
     super();
@@ -22,6 +28,7 @@ class App extends Component {
       <Route exact path='/' render={() =>
         <NavBar 
         user={this.state.user}
+        handleLogout={this.handleLogout}
         />
       }/>
           <Route exact path='/signup' render={({ history }) => 
