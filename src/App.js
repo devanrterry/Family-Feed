@@ -5,7 +5,7 @@ import './App.css';
 import NavBar from './components/NavBar/NavBar'
 import SignupPage from './pages/SignupPage/SignupPage'
 import LoginPage from './pages/LoginPage/LoginPage'
-import userService from '../utils/userService'
+import userService from './utils/userService'
 
 class App extends Component {
   constructor() {
@@ -20,7 +20,9 @@ class App extends Component {
     <header>Family Feed</header>
     <Switch>
       <Route exact path='/' render={() =>
-        <NavBar />
+        <NavBar 
+        user={this.state.user}
+        />
       }/>
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
