@@ -8,10 +8,15 @@ import LoginPage from './pages/LoginPage/LoginPage'
 import userService from './utils/userService'
 
 
-var handleLogout = () => {
+handleLogout = () => {
   userService.logout();
   this.setState({user: null});
 }
+
+handleSignup = () => {
+  this.setState({user: userService.getUser()});
+}
+
 
 class App extends Component {
   constructor() {
@@ -34,7 +39,7 @@ class App extends Component {
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
               history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
+              handleSignup={this.handleSignup}
             />
           }/>
           <Route exact path='/login' render={({ history }) => 
