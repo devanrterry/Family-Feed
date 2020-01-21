@@ -28,6 +28,7 @@ async function signup(req, res) {
   const user = new User(req.body);
   console.log(user)
   try {
+    console.log("HITTING")
     await user.save();
     const token = createJWT(user);
     console.log("Token!: ", token)
@@ -37,6 +38,7 @@ async function signup(req, res) {
     console.log("ERROR!: ", err)
     res.status(400).json(err);
   }
+  console.log("made it to end!")
 }
 
 //* helper functions *//
