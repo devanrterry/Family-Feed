@@ -26,12 +26,15 @@ async function login(req, res) {
 
 async function signup(req, res) {
   const user = new User(req.body);
+  console.log(user)
   try {
     await user.save();
     const token = createJWT(user);
+    console.log("Token!: ", token)
     res.json({token});
   } catch (err) {
     // Probably a duplicate email
+    console.log("ERROR!: ", err)
     res.status(400).json(err);
   }
 }

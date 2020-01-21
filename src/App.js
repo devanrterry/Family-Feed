@@ -8,15 +8,6 @@ import LoginPage from './pages/LoginPage/LoginPage'
 import userService from './utils/userService'
 
 
-handleLogout = () => {
-  userService.logout();
-  this.setState({user: null});
-}
-
-handleSignupOrLogin = () => {
-  this.setState({user: userService.getUser()});
-}
-
 
 class App extends Component {
   constructor() {
@@ -53,6 +44,16 @@ class App extends Component {
     
   );
 }
+handleLogout = () => {
+  userService.logout();
+  this.setState({user: null});
 }
+
+handleSignupOrLogin = () => {
+  this.setState({user: userService.getUser()});
+}
+}
+
+
 
 export default App;
