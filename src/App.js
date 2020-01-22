@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar/NavBar";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import userService from "./utils/userService";
+import MainPage from "./components/MainPage/MainPage"
 
 class App extends Component {
   constructor() {
@@ -57,6 +58,9 @@ class App extends Component {
             )}
           />
         </Switch>
+        <div>
+          <MainPage />
+        </div>
       </div>
     );
   }
