@@ -3,7 +3,7 @@ import Feed from '../Feed/Feed';
 // import styles from './GameBoard.module.css';
 
 const MainPage = (props) => (
-  <div>
+  <div style={{display: props.user ? 'block' : 'none'}}>
       <Feed />
   </div>
 );

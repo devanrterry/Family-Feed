@@ -59,7 +59,7 @@ class App extends Component {
           />
         </Switch>
         <div>
-          <MainPage />
+          <MainPage user={this.state.user}/>
         </div>
       </div>
     );
