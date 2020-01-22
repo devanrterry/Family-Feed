@@ -3,9 +3,7 @@ import Post from '../Post/Post';
 import AddPost from '../AddPost/AddPost';
 
 
-// const Feed = (props) => (
 class Feed extends Component {
-
 
     render() {
         return (
@@ -13,8 +11,9 @@ class Feed extends Component {
         <div>
         {this.props.posts.map(post => 
           <Post
-            post={post}
-            // handleDeletePost={props.handleDeletePost}
+            posts={post}
+            handleDeletePost={this.props.handleDeletePost}
+            handleUpdatePost={this.props.handleUpdatePost}
             key={post._id}
           />
         )}

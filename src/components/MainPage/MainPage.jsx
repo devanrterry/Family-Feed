@@ -7,6 +7,8 @@ const MainPage = (props) => (
       <Feed 
       posts={props.posts}
       handleAddPost={props.handleAddPost}
+      handleDeletePost={props.handleDeletePost}
+      handleUpdatePost={props.handleUpdatePost}
       />
   </div>
 );

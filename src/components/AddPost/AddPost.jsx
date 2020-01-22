@@ -14,6 +14,7 @@ class AddPost extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.handleAddPost(this.state.formData);
+   
   };
 
   handleChange = e => {
@@ -44,7 +45,7 @@ class AddPost extends Component {
             className="btn"
             disabled={this.state.invalidForm}
           >
-            ADD POST
+            POST
           </button>
         </form>
       </>

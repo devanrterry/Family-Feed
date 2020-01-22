@@ -20,6 +20,18 @@ class App extends Component {
     };
   }
 
+  handleUpdatePost = async updatedPostData => {
+    const updatedPost = await postAPI.update(updatedPostData);
+    const newPostsArray = this.state.posts.map(p => 
+      p._id === updatedPost._id ? updatedPost : p
+    );
+    this.setState(
+      {posts: newPostsArray},
+      () => this.props.history.push('/')
+    );
+  }
+
+
   handleAddPost = async newPostData => {
     const newPost = await postAPI.create(newPostData);
     this.setState(state => ({
@@ -28,6 +40,14 @@ class App extends Component {
     // Using cb to wait for state to update before rerouting
     // () => this.props.history.push('/')
     );
+  }
+
+  handleDeletePost= async id => {
+    await postAPI.deleteOne(id);
+    this.setState(state => ({
+      // Yay, filter returns a NEW array
+      posts: state.posts.filter(p => p._id !== id)
+    }), () => this.props.history.push('/'));
   }
 
   handleLogout = () => {
@@ -83,6 +103,8 @@ class App extends Component {
           user={this.state.user}
           posts={this.state.posts}
           handleAddPost={this.handleAddPost}
+          handleDeletePost={this.handleDeletePost}
+          handleUpdatePost={this.handleUpdatePost}
           />
         </div>
       </div>
