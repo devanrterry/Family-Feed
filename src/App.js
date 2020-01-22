@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-// import logo from './logo.svg';
+import { ToastContainer } from "react-toastify";
 import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
 import NavBar from "./components/NavBar/NavBar";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
@@ -26,8 +27,9 @@ class App extends Component {
     return (
       <div className="App">
         <header>Family Feed</header>
+        <ToastContainer />
         <Switch>
-          <Route
+        <Route
             exact
             path="/"
             render={() => (

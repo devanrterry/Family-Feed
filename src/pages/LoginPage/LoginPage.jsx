@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify'
 import './LoginPage.css';
 import userService from '../../utils/userService';
 
@@ -27,7 +28,7 @@ class LoginPage extends Component {
       this.props.history.push('/');
     } catch (err) {
       // Invalid user data (probably duplicate email)
-      //* need to add a Modal here *//
+      toast.error('Invalid Credentials')
     }
   }
 
