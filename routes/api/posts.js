@@ -3,7 +3,8 @@ const router = express.Router();
 const postsCtrl = require('../../controllers/posts');
 
 /*---------- Public Routes ----------*/
-router.post('/posts', postsCtrl.create);
+router.post('/', postsCtrl.create);
+router.get('/', postsCtrl.index);
 
 
 

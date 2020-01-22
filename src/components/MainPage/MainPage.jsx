@@ -4,7 +4,10 @@ import Feed from '../Feed/Feed';
 
 const MainPage = (props) => (
   <div style={{display: props.user ? 'block' : 'none'}}>
-      <Feed />
+      <Feed 
+      posts={props.posts}
+      handleAddPost={props.handleAddPost}
+      />
   </div>
 );
 

@@ -3,20 +3,27 @@ import Post from '../Post/Post';
 import AddPost from '../AddPost/AddPost';
 
 
+// const Feed = (props) => (
 class Feed extends Component {
 
-    state = {
-      posts: []
-    };
 
     render() {
         return (
-          <div>
-           <Post />
-           <AddPost />
-          </div>
+        <div>
+        <div>
+        {this.props.posts.map(post => 
+          <Post
+            post={post}
+            // handleDeletePost={props.handleDeletePost}
+            key={post._id}
+          />
+        )}
+      </div>
+           <AddPost 
+           handleAddPost={this.props.handleAddPost}/>
+         </div> 
         );
-      }
+      };
     }
 
 
