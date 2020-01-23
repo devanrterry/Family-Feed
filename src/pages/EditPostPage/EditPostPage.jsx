@@ -27,9 +27,8 @@ class EditPostPage extends Component {
       <>
         <h1>Edit Post</h1>
         <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
-          <div className="form-group">
+          <div className="form-group" >
             <input
-            //   className="form-control"
               type="text"
               name="content"
               value={this.state.formData.content}
@@ -44,7 +43,11 @@ class EditPostPage extends Component {
           >
             Save Changes
           </button>
+          <button
+          className="btn red"
+          >
           <Link to='/'>CANCEL</Link>
+          </button>
           </form>
       </>
     );

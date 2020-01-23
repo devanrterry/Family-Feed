@@ -20,7 +20,7 @@ function Post({post, handleDeletePost}){
         </div>
         <div>
         <Link
-          className='btn btn-xs btn-warning'
+          className='btn-small green'
           to={{
             pathname: '/edit',
             state: {post}
@@ -32,9 +32,11 @@ function Post({post, handleDeletePost}){
         
         <button
           onClick={() => handleDeletePost(post._id)}
+          class="btn-small red"
         >
           DELETE
         </button>
+        <div class="divider"></div>
       </div>
     </div>
   );
