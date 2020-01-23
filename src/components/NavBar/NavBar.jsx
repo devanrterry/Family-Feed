@@ -21,14 +21,21 @@ const NavBar = props => {
     </nav>
    
   ) : (
-    <nav>
+    <nav class="row cyan darken-1">
+      <div class="left-align">
+      
+      <a href="/" class="brand-logo">&nbsp;&nbsp;Family Feed</a>
+    </div>
+      <div class="right-align">
       <Link to="/login" className="NavBar-link">
         Log In
       </Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <Link to="/signup" className="NavBar-link">
-        Sign Up
+        Sign Up 
       </Link>
+      &nbsp;&nbsp;
+      </div>
     </nav>
   );
 
