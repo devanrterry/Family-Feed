@@ -26,11 +26,11 @@ function Post({post, handleDeletePost}){
             state: {post}
           }}
         >
-          EDIT
+          Edit 
         </Link>
+    
         
         <button
-          className='btn btn-xs btn-danger margin-left-10'
           onClick={() => handleDeletePost(post._id)}
         >
           DELETE

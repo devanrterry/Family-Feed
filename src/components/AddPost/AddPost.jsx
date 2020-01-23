@@ -31,8 +31,10 @@ class AddPost extends Component {
         <h1>Add Post</h1>
         <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <input
+            <textarea
             //   className="form-control"
+              id="textarea1"
+              className="materialize-textarea"
               type="text"
               name="content"
               value={this.state.formData.content}
@@ -41,8 +43,8 @@ class AddPost extends Component {
             />
           </div>
           <button
+            
             type="submit"
-            className="btn"
             disabled={this.state.invalidForm}
           >
             POST
@@ -55,3 +57,4 @@ class AddPost extends Component {
 
 
 export default AddPost;
+
