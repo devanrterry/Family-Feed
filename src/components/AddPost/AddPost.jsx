@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+var file = new FormData();
 
 class AddPost extends Component {
   state = {
@@ -6,14 +7,22 @@ class AddPost extends Component {
     formData: {
     //   user: user,
       content: '',
+      picture: ''
     }
   };
 
   formRef = React.createRef();
 
-  handleSubmit = e => {
+  handleFileUpload = e => {
+      file.delete('image');
+      file.append('user' , this.props.user.name)
+      file.append('image', e.target.files[0])
+  }
+
+  handleSubmit = async e => {
     e.preventDefault();
-    this.props.handleAddPost(this.state.formData);
+    await file.append('content',JSON.stringify(this.state.formData))
+    this.props.handleAddPost(file);
    
   };
 
@@ -49,6 +58,7 @@ class AddPost extends Component {
           >
             POST
           </button>
+          <input type="file" name="image" onChange={this.handleFileUpload} />
         </form>
       </div>
     );

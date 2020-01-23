@@ -16,13 +16,12 @@ return fetch(BASE_URL)
 }
 
 export function create(post) {
-    post.date = new Date();
   return fetch(BASE_URL, {
     method: 'POST',
-    headers: {'Content-type': 'application/json', 
-    'Authorization': 'Bearer ' + tokenService.getToken()   
-},
-    body: JSON.stringify(post)
+//     headers: {'Content-type': 'application/json', 
+//     'Authorization': 'Bearer ' + tokenService.getToken()   
+// },
+    body: post
   }).then(res => res.json());
 }
 

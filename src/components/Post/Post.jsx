@@ -17,6 +17,7 @@ function Post({post, handleDeletePost, user}){
   return (
     <div >
         <div>
+        <img src={post.picture}/>
         <p> {post.content}</p>
         <p> { post.user}</p>
         <p>{`${new Date(post.date).toLocaleString()}`}</p>

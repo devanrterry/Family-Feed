@@ -24,8 +24,15 @@ async function index(req, res) {
   }
 
 async function create(req, res) {
-    console.log(req.user)
-    req.body.user = req.user.name;
-    const post = await Post.create(req.body);
+    // console.log(req.user)
+    // console.log('file ===>',req.file)
+    // console.log('body ==>',req.body)
+    // console.log(req.body.content.content)
+    const post = await Post.create({
+        user: req.body.user,
+        content: req.body.content.content,
+        picture: req.file.secure_url,
+        date : new Date()
+    });
     res.status(201).json(post);
   }

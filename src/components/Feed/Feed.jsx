@@ -17,7 +17,9 @@ function Feed(props) {
         ))}
       </div>
       <div style={{...entryDiv}}>
-      <AddPost handleAddPost={props.handleAddPost} />
+      <AddPost handleAddPost={props.handleAddPost} 
+      user={props.user}
+      />
       </div>
     </div>
   );
