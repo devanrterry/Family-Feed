@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import NavBar from '../../components/NavBar/NavBar'
 
 class EditPostPage extends Component {
   state = {
@@ -24,9 +25,14 @@ class EditPostPage extends Component {
 
   render() {
     return (
-      <>
-        <h1>Edit Post</h1>
-        <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
+        <>
+        <NavBar
+                  user={this.state.user}
+                  handleLogout={this.handleLogout}
+                />
+        <h4>Edit Post</h4>
+        <div class="container">
+        <form class="container" ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
           <div className="form-group" >
             <input
               type="text"
@@ -36,20 +42,24 @@ class EditPostPage extends Component {
               required
             />
           </div>
+          <div class="row">
+          <div class="left-align col s6">
           <button
             type="submit"
-            className="btn"
+            className="btn btn-small"
             disabled={this.state.invalidForm}
           >
-            Save Changes
+            <i class="material-icons">check</i>
           </button>
-          <button
-          className="btn red"
-          >
-          <Link to='/'>CANCEL</Link>
-          </button>
+          </div>
+          <div class="right-align col s6">
+          <Link to='/' class="btn btn-small red"> <i class="material-icons">cancel</i></Link>
+          </div>
+          </div>
           </form>
-      </>
+          </div>
+          </>
+      
     );
   }
 }

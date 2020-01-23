@@ -68,7 +68,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>Family Feed</header>
         <ToastContainer />
         <Switch>
           <Route

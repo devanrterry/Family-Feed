@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify'
 import './LoginPage.css';
 import userService from '../../utils/userService';
+import NavBar from '../../components/NavBar/NavBar';
 
 class LoginPage extends Component {
   
@@ -34,8 +35,14 @@ class LoginPage extends Component {
 
   render() {
     return (
-      <div className="LoginPage">
-        <header className="header-footer">Log In</header>
+      <>
+      <NavBar
+                  user={this.state.user}
+                  handleLogout={this.handleLogout}
+                />
+      <div class="container">
+      <div className="container">
+        <h4 className="header-footer">Log In</h4>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="form-group">
             <div className="col-sm-12">
@@ -55,6 +62,8 @@ class LoginPage extends Component {
           </div>
         </form>
       </div>
+      </div>
+      </>
     );
   }
 }

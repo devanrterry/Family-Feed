@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link} from 'react-router-dom';
+
 // import EditPostPage from '../../pages/EditPostPage/EditPostPage';
 
 
@@ -12,13 +13,16 @@ import { Link} from 'react-router-dom';
 //     }
 
 // render(){
-function Post({post, handleDeletePost}){
+function Post({post, handleDeletePost, user}){
   return (
     <div >
         <div>
         <p> {post.content}</p>
         <p> { post.user}</p>
+        <p>{`${new Date(post.date).toLocaleString()}`}</p>
         </div>
+        {console.log(user)}
+        { (user.name === post.user) &&
         <div>
         <Link
           className='btn-small green'
@@ -37,8 +41,10 @@ function Post({post, handleDeletePost}){
         >
           DELETE
         </button>
-        <div class="divider"></div>
+        
       </div>
+        }
+        <div class="divider"></div>
     </div>
   );
 }

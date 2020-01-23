@@ -28,7 +28,8 @@ export function create(post) {
 
 export function deleteOne(id) {
     return fetch(`${BASE_URL}/${id}`, {
-      method: 'DELETE'
+      method: 'DELETE',
+      headers: {'Authorization': 'Bearer ' + tokenService.getToken()}
     }).then(res => res.json());
   }
 

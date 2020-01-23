@@ -6,12 +6,13 @@ function Feed(props) {
   return (
     <div>
       <div>
-        {props.posts.map(post => (
+        { props.user && props.posts.map(post => (
           <Post
             post={post}
             handleDeletePost={props.handleDeletePost}
             handleUpdatePost={props.handleUpdatePost}
             key={post._id}
+            user={props.user}
           />
         ))}
       </div>
