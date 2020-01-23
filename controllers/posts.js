@@ -4,8 +4,14 @@ const Post = require('../models/post')
 module.exports = {
     create,
     index,
-    delete: deleteOne
+    delete: deleteOne,
+    update
 }
+
+async function update(req, res) {
+    const updatedPost = await Post.findByIdAndUpdate(req.params.id, req.body, {new: true});
+    res.status(200).json(updatedPost);
+  }  
 
 async function deleteOne(req, res) {
     const deletedPost = await Post.findByIdAndRemove(req.params.id);

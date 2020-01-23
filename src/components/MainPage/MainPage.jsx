@@ -1,5 +1,6 @@
 import React from 'react';
 import Feed from '../Feed/Feed';
+// import {Link} from 'react-router-dom'
 // import styles from './GameBoard.module.css';
 
 const MainPage = (props) => (
@@ -10,6 +11,7 @@ const MainPage = (props) => (
       handleDeletePost={props.handleDeletePost}
       handleUpdatePost={props.handleUpdatePost}
       />
+    
   </div>
 );
 

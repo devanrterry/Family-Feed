@@ -1,20 +1,17 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
-class AddPost extends Component {
+class EditPostPage extends Component {
   state = {
-    invalidForm: true,
-    formData: {
-    //   user: user,
-      content: '',
-    }
+    invalidForm: false,
+    formData: this.props.location.state.post
   };
 
   formRef = React.createRef();
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.handleAddPost(this.state.formData);
-   
+    this.props.handleUpdatePost(this.state.formData);
   };
 
   handleChange = e => {
@@ -27,8 +24,8 @@ class AddPost extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Add Post</h1>
+      <>
+        <h1>Edit Post</h1>
         <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
           <div className="form-group">
             <input
@@ -45,13 +42,13 @@ class AddPost extends Component {
             className="btn"
             disabled={this.state.invalidForm}
           >
-            POST
+            Save Changes
           </button>
-        </form>
-      </div>
+          <Link to='/'>CANCEL</Link>
+          </form>
+      </>
     );
   }
 }
 
-
-export default AddPost;
+export default EditPostPage;
