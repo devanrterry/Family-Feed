@@ -17,6 +17,7 @@ function Post({post, handleDeletePost}){
     <div >
         <div>
         <p> {post.content}</p>
+        <p> { post.user}</p>
         </div>
         <div>
         <Link

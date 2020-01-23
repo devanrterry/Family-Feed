@@ -24,6 +24,8 @@ async function index(req, res) {
   }
 
 async function create(req, res) {
+    console.log(req.user)
+    req.body.user = req.user.name;
     const post = await Post.create(req.body);
     res.status(201).json(post);
   }

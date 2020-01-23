@@ -24,15 +24,15 @@ function Feed(props) {
 
 let entryDiv = {
     position: 'fixed',
-    top: 30,
+    bottom: 30,
     right: 30,
     width: 250,
-    height: 150,
+    height: 350,
     padding: 10,
     border: '1px solid #000',
     borderRadius: 5,
-    backgroundColor: '#555',
-    color: 'white',
+    backgroundColor: 'light grey',
+    color: 'black',
 }
 
 export default Feed;

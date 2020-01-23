@@ -1,3 +1,5 @@
+import tokenService from "./tokenService";
+
 const BASE_URL = '/api/posts';
 
 export function getAll() {
@@ -14,9 +16,12 @@ return fetch(BASE_URL)
 }
 
 export function create(post) {
+    post.date = new Date();
   return fetch(BASE_URL, {
     method: 'POST',
-    headers: {'content-type': 'application/json'},
+    headers: {'Content-type': 'application/json', 
+    'Authorization': 'Bearer ' + tokenService.getToken()   
+},
     body: JSON.stringify(post)
   }).then(res => res.json());
 }
@@ -34,7 +39,7 @@ export function update(post) {
       body: JSON.stringify(post)
     }).then(res => res.json());
   }
-  
+
 export default {
     getAll,
     create,
