@@ -4,7 +4,7 @@ import "./NavBar.css";
 
 const NavBar = props => {
   let nav = props.user ? (
-    <nav class="row lime darken-1">
+    <nav class="row transparent">
       <div class="left-align">
       
         <a href="/" class="brand-logo">
@@ -24,10 +24,12 @@ const NavBar = props => {
       </div>
     </nav>
   ) : (
-    <nav class="row cyan darken-1">
+    <nav class="row transparent">
       <div class="left-align">
         <a href="/" class="brand-logo">
+          <div className="head">
           &nbsp;&nbsp;Family Feed
+          </div>
         </a>
       </div>
       <div class="right-align">

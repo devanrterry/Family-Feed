@@ -20,7 +20,7 @@ function Post({post, handleDeletePost, user}){
       
     <div class="row">
     <div class="col s12 m6">
-      <div class="card blue-grey lighten-2">
+      <div class="card  light-blue lighten-5">
         <div class="card-content black-text">
           <span class="card-title">{ post.user} wrote on {`${new Date(post.date).toLocaleString()}`}</span>
           <img src={post.picture}/>

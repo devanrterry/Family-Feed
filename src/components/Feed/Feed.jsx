@@ -5,6 +5,7 @@ import AddPost from "../AddPost/AddPost";
 function Feed(props) {
   return (
     <div>
+        <h1>What's everyone up to..</h1>
       <div>
         { props.user && props.posts.map(post => (
           <Post
@@ -34,8 +35,8 @@ let entryDiv = {
     padding: 10,
     border: '1px solid #000',
     borderRadius: 20,
-    background: '#445981a4',
-    color: 'black',
+    background: 'rgba(69, 94, 92, 0.884)',
+    color: 'white',
 }
 
 export default Feed;
