@@ -6,17 +6,21 @@ const NavBar = props => {
   let nav = props.user ? (
     <nav class="row cyan darken-1">
       <div class="left-align">
+      
         <a href="/" class="brand-logo">
-          &nbsp;&nbsp;Family Feed
+          <div className="head">
+          Family Feed
+          </div>
         </a>
       </div>
-      <div className="right-align">
+      <div className="right-align head">
+      <span className="NavBar-welcome">Welcome, {props.user.name}</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <Link to="" className="NavBar-link" onClick={props.handleLogout}>
           Log Out
         </Link>
-        &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <span className="NavBar-welcome">Welcome, {props.user.name}</span>
-        &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
       </div>
     </nav>
   ) : (

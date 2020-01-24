@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './AddPost.css'
 var file = new FormData();
 
 class AddPost extends Component {
@@ -58,7 +59,9 @@ class AddPost extends Component {
           >
             POST
           </button>
+          <div className="image">
           <input type="file" name="image" onChange={this.handleFileUpload} />
+          </div>
         </form>
       </div>
     );

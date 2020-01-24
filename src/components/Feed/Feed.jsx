@@ -27,14 +27,14 @@ function Feed(props) {
 
 let entryDiv = {
     position: 'fixed',
-    bottom: 30,
-    right: 30,
-    width: 250,
+    bottom: 200,
+    right: 200,
+    width: 400,
     height: 350,
     padding: 10,
     border: '1px solid #000',
-    borderRadius: 5,
-    backgroundColor: 'light grey',
+    borderRadius: 20,
+    background: '#445981a4',
     color: 'black',
 }
 

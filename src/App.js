@@ -79,6 +79,7 @@ class App extends Component {
                   user={this.state.user}
                   handleLogout={this.handleLogout}
                 />
+                <h1 className="headline">Terry Family Feed</h1>
                 <div>
                   <MainPage
                     user={this.state.user}
