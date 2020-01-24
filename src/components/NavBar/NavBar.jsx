@@ -4,7 +4,7 @@ import "./NavBar.css";
 
 const NavBar = props => {
   let nav = props.user ? (
-    <nav class="row cyan darken-1">
+    <nav class="row lime darken-1">
       <div class="left-align">
       
         <a href="/" class="brand-logo">

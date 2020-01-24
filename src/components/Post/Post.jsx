@@ -31,7 +31,7 @@ function Post({post, handleDeletePost, user}){
         { (user.name === post.user) && 
         <div>
         <Link
-          className='btn-small green'
+          className='btn-small '
           to={{
             pathname: '/edit',
             state: {post}
