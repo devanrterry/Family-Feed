@@ -35,8 +35,7 @@ class App extends Component {
       state => ({
         posts: [...state.posts, newPost]
       })
-      // Using cb to wait for state to update before rerouting
-      // () => this.props.history.push('/')
+     
     );
   };
 
