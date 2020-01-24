@@ -12,7 +12,7 @@ HTML, CSS, Javascript, React.js, MongoDB, Express, Node.js, Materialize CSS
 
 ### Screenshot:
 
-![View Screenshot](https://i.imgur.com/7uB8Oha.jpg)
+![View Screenshot](https://i.imgur.com/bnKfZlk.png)
 
 ### Link to Deployed App:
 

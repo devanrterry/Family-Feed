@@ -53,7 +53,7 @@ class AddPost extends Component {
             />
           </div>
           <button
-            class="btn btn-medium"
+            class="btn btn-medium black"
             type="submit"
             disabled={this.state.invalidForm}
           >
