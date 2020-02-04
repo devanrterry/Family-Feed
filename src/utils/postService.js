@@ -3,14 +3,6 @@ import tokenService from "./tokenService";
 const BASE_URL = '/api/posts';
 
 export function getAll() {
-//   return fetch(BASE_URL, {
-//     headers : { 
-//         'Content-Type': 'application/json',
-//         'Accept': 'application/json'
-//        }
-//   })
-//   .then(res => res.json())
-//   .then(data => data)
 return fetch(BASE_URL) 
   .then(res => res.json())
 }
@@ -18,9 +10,6 @@ return fetch(BASE_URL)
 export function create(post) {
   return fetch(BASE_URL, {
     method: 'POST',
-//     headers: {'Content-type': 'application/json', 
-//     'Authorization': 'Bearer ' + tokenService.getToken()   
-// },
     body: post
   }).then(res => res.json());
 }
