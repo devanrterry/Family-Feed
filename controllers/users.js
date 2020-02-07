@@ -41,7 +41,7 @@ async function signup(req, res) {
   console.log("made it to end!")
 }
 
-//* helper functions *//
+
 
 function createJWT(user) {
     return jwt.sign(
