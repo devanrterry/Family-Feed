@@ -43,7 +43,6 @@ class App extends Component {
     await postAPI.deleteOne(id);
     this.setState(
       state => ({
-        // Yay, filter returns a NEW array
         posts: state.posts.filter(p => p._id !== id)
       }),
       () => this.props.history.push("/")
