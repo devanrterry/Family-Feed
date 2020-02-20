@@ -2,18 +2,6 @@ import React from 'react';
 import { Link} from 'react-router-dom';
 import './Post.css';
 
-// import EditPostPage from '../../pages/EditPostPage/EditPostPage';
-
-
-// class Post extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state ={
-//             posts : this.props.posts
-//         }
-//     }
-
-// render(){
 
 function Post({post, handleDeletePost, user}){
   return (
