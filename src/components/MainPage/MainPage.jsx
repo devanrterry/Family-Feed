@@ -1,8 +1,6 @@
 import React from 'react';
 import Feed from '../Feed/Feed';
-// import NavBar from '../NavBar/NavBar'
-// import {Link} from 'react-router-dom'
-// import styles from './GameBoard.module.css';
+
 
 const MainPage = (props) => (
 
